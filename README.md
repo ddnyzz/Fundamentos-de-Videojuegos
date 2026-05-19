@@ -1,100 +1,157 @@
-# Fundamentos-de-Videojuegos
+# Proyecto de Videojuego 2D — JMonkeyEngine + Tiled
 
-# Disruptivo
+## Descripción
 
-Proyecto de videojuego de terror psicológico desarrollado en JMonkeyEngine.
+Proyecto de videojuego 2D desarrollado con Java y JMonkeyEngine, utilizando Tiled como editor principal de mapas y un enfoque modular basado en datos.
 
----
+El objetivo del proyecto es construir una base técnica escalable, organizada y fácil de mantener, priorizando al mismo tiempo un flujo de trabajo rápido y eficiente debido a las limitaciones típicas de un proyecto escolar.
 
-## Premisa
+El desarrollo está enfocado en:
 
-En el Londres del siglo XIX, Rupert es un joven internado en una institución psiquiátrica de carácter religioso. Considerado un paciente problemático, es sometido a constantes tratamientos para “corregir” su comportamiento.
-
-El jugador controla a Rupert en su intento por escapar del hospital.
-
----
-
-## Contexto
-
-La historia se sitúa en una institución psiquiátrica donde la disciplina, el aislamiento y los tratamientos forman parte de la rutina. Las conductas fuera de lo común son tratadas como algo que debe ser corregido.
+* Modularidad.
+* Reutilización de sistemas.
+* Optimización de recursos.
+* Bajo acoplamiento.
+* Facilidad de integración.
+* Producción rápida.
+* Pipeline simple y mantenible.
 
 ---
 
-## Historia de Rupert
+# Tecnologías
 
-Rupert creció en un entorno familiar inestable. Su padre era una figura violenta y distante, mientras que su madre, vinculada a la institución psiquiátrica, mantenía una actitud fría y poco afectiva.
+## Motor
 
-Durante su infancia, Rupert desarrolló comportamientos antisociales y una fuerte desconexión emocional. Con el tiempo, comenzó a experimentar episodios de confusión y recuerdos poco claros, especialmente relacionados con salidas nocturnas en las que buscaba a su padre.
+* Java.
+* JMonkeyEngine (jME).
 
-En estas salidas ocurrieron eventos ambiguos que Rupert no logra recordar con claridad. A partir de estos incidentes, su comportamiento fue considerado peligroso, lo que llevó a su internamiento en la institución.
+## Herramientas
 
-No se establece con certeza si Rupert es responsable de algo grave o si su percepción de los hechos está alterada.
-
----
-
-## Desarrollo
-
-Rupert intenta escapar del hospital mientras evita ser capturado por el personal.
-
-Cada vez que es atrapado:
-
-- Es devuelto al inicio  
-- Es sometido a medicación  
-
-Estos tratamientos no lo ayudan, sino que afectan su percepción.
+* Tiled (`.tmx` y `.tsx`).
+* Libresprite.
+* Git + GitHub.
 
 ---
 
-## Mecánica Narrativa
+# Características Técnicas
 
-El mundo del juego cambia con cada intento:
+## Arquitectura basada en datos
 
-- El entorno se vuelve menos claro  
-- Algunas rutas se modifican  
-- Aparecen elementos que no siempre son confiables  
+Gran parte del comportamiento del juego se define mediante propiedades externas configuradas directamente en Tiled, reduciendo lógica hardcodeada y facilitando iteración rápida.
 
-Además, el jugador puede interactuar con el entorno mediante acciones simples:
+## Sistema modular
 
-- Apuntar hacia objetos o zonas específicas  
-- Activar o desactivar mecanismos (puertas, luces, obstáculos)  
-- Alterar el comportamiento de ciertos elementos del entorno  
+El proyecto separa claramente:
 
-Estas acciones pueden funcionar de manera diferente según el estado de Rupert. Un mismo objeto puede reaccionar de forma distinta dependiendo del nivel de medicación, generando incertidumbre sobre qué acciones son correctas.
+* Render.
+* Física.
+* Audio.
+* IA.
+* UI.
+* Input.
+* Interacciones.
+* Eventos.
+* Persistencia.
 
-Estos cambios representan el deterioro de la percepción de Rupert, sin confirmar si se trata de una condición propia o consecuencia del tratamiento.
+## Integración con Tiled
 
----
+Los mapas y tilesets funcionan como núcleo del pipeline técnico:
 
-## Objetivo
+* Mapas `.tmx`.
+* Tilesets `.tsx`.
+* Propiedades personalizadas.
+* Triggers.
+* Colisiones.
+* Spawns.
+* Eventos.
 
-El objetivo es escapar del hospital, adaptándose a los cambios del entorno en cada intento.
+## Pipeline optimizado
 
----
+El proyecto prioriza:
 
-## Enfoque
-
-La historia se presenta de forma simple y breve, a través de:
-
-- Mensajes cortos  
-- Cambios en el entorno  
-
-No se ofrece una explicación definitiva sobre la condición de Rupert, manteniendo la ambigüedad durante toda la experiencia.
-
----
-
-## Idea central
-
-El juego plantea que cada intento de “corregir” a Rupert lo aleja más de una percepción clara de la realidad, dejando al jugador con la duda de si está escapando de un lugar que lo daña… o si está perdiendo el control.
-
----
-
-## Tecnologías
-
-- JMonkeyEngine  
-- Java  
+* Reutilización de assets.
+* Automatización básica.
+* Menor trabajo manual posible.
+* Estructura clara de carpetas.
+* Escalabilidad controlada.
 
 ---
 
-## Estado del proyecto
+# Filosofía del Proyecto
 
-En desarrollo (prototipo)
+Este proyecto fue diseñado bajo restricciones reales de tiempo y recursos.
+
+Por ello, todas las decisiones técnicas priorizan:
+
+* Simplicidad.
+* Rapidez de desarrollo.
+* Sistemas reutilizables.
+* Bajo costo técnico.
+* Fácil mantenimiento.
+* Resultados funcionales rápidos.
+
+Se evita deliberadamente:
+
+* Sobreingeniería.
+* Sistemas excesivamente complejos.
+* Dependencias innecesarias.
+* Arquitecturas difíciles de mantener.
+
+---
+
+# Objetivos Técnicos
+
+* Construir una base sólida para videojuegos 2D.
+* Aprender arquitectura modular aplicada a videojuegos.
+* Implementar integración profesional con Tiled.
+* Desarrollar sistemas reutilizables.
+* Crear un pipeline eficiente para proyectos pequeños.
+* Mantener el proyecto viable dentro del tiempo escolar.
+
+---
+
+# Estructura del Proyecto
+
+```text
+/assets
+    /tilesets
+    /maps
+    /sprites
+    /audio
+    /ui
+
+/src
+    /core
+    /map
+    /entity
+    /player
+    /enemy
+    /interaction
+    /physics
+    /audio
+    /ui
+    /events
+    /utils
+```
+
+---
+
+# Estado del Proyecto
+
+Proyecto en desarrollo activo.
+
+Actualmente enfocado en:
+
+* Base técnica.
+* Sistema de mapas.
+* Integración Tiled + jME.
+* Colisiones.
+* Entidades.
+* Interacciones.
+* Optimización del pipeline.
+
+---
+
+# Objetivo Final
+
+Crear un videojuego 2D funcional, optimizado y técnicamente organizado utilizando herramientas accesibles y un pipeline realista para un entorno escolar, priorizando mantenibilidad, reutilización y rapidez de desarrollo.
