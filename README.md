@@ -1,4 +1,4 @@
-# Proyecto de Videojuego 2D — JMonkeyEngine + Tiled
+# Proyecto de Videojuego 2D — JMonkeyEngine
 
 ## Descripción
 
